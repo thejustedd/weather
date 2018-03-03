@@ -1,0 +1,90 @@
+<h1 class="is-size-1">
+	{{ location.name }}
+	<small>({{ location.country }})</small>
+</h1>
+
+<div class="columns">
+	<div class="column is-narrow">
+		<small class="is-size-1">{{ forecast.forecastday.0.day.avgtemp_c }}</small>
+		<sup class="is-size-3">
+			<sup>o</sup>C
+		</sup>
+	</div>
+	<div class="column">
+		<img src="{{ forecast.forecastday.0.day.condition.icon }}" alt="">
+		<div>
+			<small>{{ forecast.forecastday.0.day.condition.text }}</small>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a href="#">{{ forecast.forecastday.0.date }}</a>
+		</li>
+		<li>
+			<a href="#">{{ forecast.forecastday.1.date }}</a>
+		</li>
+		<li>
+			<a href="#">{{ forecast.forecastday.2.date }}</a>
+		</li>
+	</ul>
+</div>
+<div class="row">
+	<div class="media">
+		<a class="pull-left" href="#">
+			<img class="media-object" src="{{ forecast.forecastday.0.day.condition.icon }}" alt="icon">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">
+				{{ location.name }}
+				<small>({{ location.country }})</small>
+			</h4>
+			{{ forecast.forecastday.0.day.condition.text }}
+		</div>
+	</div>
+
+</div>
+<div class="row">
+	<ul class="list-group">
+		<li class="list-group-item">
+			<img src="{{ forecast.forecastday.0.day.condition.icon }}" alt="icon"> {{ forecast.forecastday.0.day.condition.text }}
+		</li>
+
+		<li class="list-group-item">
+			<b>Температура</b>
+		</li>
+		<li class="list-group-item">Минимальная: {{ forecast.forecastday.0.day.mintemp_c }}&deg;C</li>
+		<li class="list-group-item">Средняя: {{ forecast.forecastday.0.day.avgtemp_c }}&deg;C</li>
+		<li class="list-group-item">Максимальная: {{ forecast.forecastday.0.day.maxtemp_c }}&deg;C</li>
+
+		<li class="list-group-item">
+			<b>Ветер</b>
+		</li>
+		<li class="list-group-item">Максимальный: {{ forecast.forecastday.0.day.maxwind_kph }} км/час</li>
+
+		<li class="list-group-item">
+			<b>Осадки</b>
+		</li>
+		<li class="list-group-item">Всего: {{ forecast.forecastday.0.day.totalprecip_mm }} мм</li>
+
+		<li class="list-group-item">
+			<b>Влажность</b>
+		</li>
+		<li class="list-group-item">Средняя: {{ forecast.forecastday.0.day.avghumidity }}%</li>
+
+		<li class="list-group-item">
+			<b>Видимость</b>
+		</li>
+		<li class="list-group-item">Средняя: {{ forecast.forecastday.0.day.avgvis_km }} км</li>
+
+		<li class="list-group-item">
+			<b>Астрономия</b>
+		</li>
+		<li class="list-group-item">Восход солнца: {{ forecast.forecastday.0.astro.sunrise }}</li>
+		<li class="list-group-item">Закат солнца: {{ forecast.forecastday.0.astro.sunset }}</li>
+		<li class="list-group-item">Восход луны: {{ forecast.forecastday.0.astro.moonrise }}</li>
+		<li class="list-group-item">Закат луны: {{ forecast.forecastday.0.astro.moonset }}</li>
+	</ul>
+</div>

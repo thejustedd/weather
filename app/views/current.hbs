@@ -1,0 +1,19 @@
+<h1 class="is-size-1">
+    {{ location.name }}
+    <small>({{ location.country }})</small>
+</h1>
+
+<div class="columns">
+    <div class="column is-narrow">
+        <span class="is-size-1">{{ current.temp_c }}</span>
+        <sup class="is-size-3">
+            <sup>o</sup>C
+        </sup>
+    </div>
+    <div class="column">
+        <img src="{{ current.condition.icon }}" alt="">
+        <div>
+            <small>{{ current.condition.text }}</small>
+        </div>
+    </div>
+</div>

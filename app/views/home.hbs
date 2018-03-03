@@ -1,0 +1,17 @@
+<form action="/search" method="post">
+    <div class="col-sm-12">
+        <label for="city">Город</label>
+    </div>
+    <div class="col-sm-7">
+        <input name="city" id="city" type="text" class="form-control" placeholder="Введите название города">
+    </div>
+    <div class="col-sm-3">
+        <select name="type" class="form-control">
+            <option value="current">Текущая</option>
+            <option value="forecast">Прогноз</option>
+        </select>
+    </div>
+    <div class="col-sm-2">
+        <button type="submit" class="btn">Найти</button>
+    </div>
+</form>

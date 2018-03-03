@@ -1,0 +1,81 @@
+<div class="row">
+	<h3>Погода в {{ location.name }}, {{ location.region }}, {{ location.country }}</h3>
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a href="#20180302" data-toggle="tab" id="current-tab" aria-controls="20180302" aria-expanded="true">Fri 03/02</a>
+		</li>
+		<li>
+			<a href="#20180303" data-toggle="tab" id="current-tab" aria-controls="20180303" aria-expanded="true">Sat 03/03</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div id="20180302" class="tab-pane fade in active">
+			<div class="">
+				<div class="table-responsive">
+					<table class="table table-condensed table-hover table-bordered small" <thead>
+						<tr>
+							<th>Восход солнца: {{ forecast.forecastday.0.astro.sunrise }}
+								<br />Закат солнца: {{ forecast.forecastday.0.astro.sunset }}</th>
+							<th>Восход луны: {{ forecast.forecastday.0.astro.moonrise }}
+								<br />Закат луны: {{ forecast.forecastday.0.astro.moonset }}</th>
+							<th style="background-color:#9BF6F3;">Max:
+								<br />{{ forecast.forecastday.0.day.maxtemp_c }} &deg;c</th>
+							<th style="background-color:#9BF6F3;">Min:
+								<br />{{ forecast.forecastday.0.day.mintemp_c }} &deg;c</th>
+							<th style="background-color:#9BF6F3;">Avg:
+								<br />{{ forecast.forecastday.0.day.avgtemp_c }} &deg;c</th>
+							<th style="background-color:#4DCBF6;">Precip:
+								<br />{{ forecast.forecastday.0.day.totalprecip_mm }} mm</th> {{!-- 3 [.00] mm --}}
+							<th style="background-color:#C4EE36;">Max Wind:
+								<br />{{ forecast.forecastday.0.day.maxwind_kph }} kph</th>
+						</tr>
+						</thead>
+					</table>
+					<table class="table table-condensed table-hover table-bordered small">
+						<thead>
+							<tr>
+								<th>&nbsp;</th>
+								<th>
+									<address>Fri 02
+										<br>0:00 am</address>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Icon</td>
+								<td>
+									<img src="//cdn.apixu.com/weather/64x64/night/116.png" alt="Partly cloudy" title="Partly cloudy" class="img-circle" style="width:50px;height:50px;">
+								</td>
+							</tr>
+							<tr>
+								<td>Temp</td>
+								<td style="background-color:#9BF6F3;">-9.5&deg;c</td>
+							</tr>
+							<tr>
+								<td>Wind</td>
+								<td style="background-color:#80F9CC;">17.6 kmph</td>
+							</tr>
+							<tr>
+								<td>Precip</td>
+								<td style="background-color:#ffffff;">0.00 mm</td>
+							</tr>
+							<tr>
+								<td>Cloud</td>
+								<td style="background-color:#D1D3D4;">53%</td>
+							</tr>
+							<tr>
+								<td>Humidity</td>
+								<td>89%</td>
+							</tr>
+							<tr>
+								<td>Pressure</td>
+								<td style="background-color:#C6F56F;">1021 mb</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather forecast</title>
+    {{!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"> --}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> {{!--
+    <link rel="stylesheet" href="css/app.css"> --}}
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand media">
+                <a href="/" class="navbar-item">
+                    <img class="media-object" src="http://www.allweathercontractors.com/wp-content/uploads/2016/05/xnew_logo_wh.png.pagespeed.ic.jTenQi1sFW.png"
+                        alt="Weather Logo">
+                </a>
+
+                <div class="navbar-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="navbar-menu navbar-end">
+                <a href="/select" class="navbar-item">Выбрать из списка</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {{{body}}}
+    </div>
+</body>
+
+</html>

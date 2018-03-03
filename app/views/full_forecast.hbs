@@ -1,0 +1,172 @@
+<div class="row">
+	<h3>Погода в {{ location.name }}, {{ location.region }}, {{ location.country }}</h3>
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a href="#20180302" data-toggle="tab" id="current-tab" aria-controls="20180302" aria-expanded="true">Fri 03/02</a>
+		</li>
+		<li>
+			<a href="#20180303" data-toggle="tab" id="current-tab" aria-controls="20180303" aria-expanded="true">Sat 03/03</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div id="20180302" class="tab-pane fade in active">
+			<div class="">
+				<div class="table-responsive">
+					<table class="table table-condensed table-hover table-bordered small" <thead>
+						<tr>
+							<th>Восход солнца: {{ forecast.forecastday.0.astro.sunrise }}
+								<br />Закат солнца: {{ forecast.forecastday.0.astro.sunset }}</th>
+							<th>Восход луны: {{ forecast.forecastday.0.astro.moonrise }}
+								<br />Закат луны: {{ forecast.forecastday.0.astro.moonset }}</th>
+							<th style="background-color:#9BF6F3;">Max:
+								<br />{{ forecast.forecastday.0.day.maxtemp_c }} &deg;c</th>
+							<th style="background-color:#9BF6F3;">Min:
+								<br />{{ forecast.forecastday.0.day.mintemp_c }} &deg;c</th>
+							<th style="background-color:#9BF6F3;">Avg:
+								<br />{{ forecast.forecastday.0.day.avgtemp_c }} &deg;c</th>
+							<th style="background-color:#4DCBF6;">Precip:
+								<br />{{ forecast.forecastday.0.day.totalprecip_mm }} mm</th> {{!-- 3 [.00] mm --}}
+							<th style="background-color:#C4EE36;">Max Wind:
+								<br />{{ forecast.forecastday.0.day.maxwind_kph }} kph</th>
+						</tr>
+						</thead>
+					</table>
+					<table class="table table-condensed table-hover table-bordered small">
+						<thead>
+							<tr>
+								<th>&nbsp;</th>
+								<th>
+									<address>Fri 02
+										<br>0:00 am</address>
+								</th>
+								<th>
+									<address>Fri 02
+										<br>3:00 am</address>
+								</th>
+								<th>
+									<address>Fri 02
+										<br>6:00 am</address>
+								</th>
+								<th>
+									<address>Fri 02
+										<br>9:00 am</address>
+								</th>
+								<th>
+									<address>Fri 02
+										<br>12:00 pm</address>
+								</th>
+								<th>
+									<address>Fri 02
+										<br>3:00 pm</address>
+								</th>
+								<th>
+									<address>Fri 02
+										<br>6:00 pm</address>
+								</th>
+								<th>
+									<address>Fri 02
+										<br>8:00 pm</address>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Icon</td>
+								<td>
+									<img src="//cdn.apixu.com/weather/64x64/night/116.png" alt="Partly cloudy" title="Partly cloudy" class="img-circle" style="width:50px;height:50px;">
+								</td>
+								<td>
+									<img src="//cdn.apixu.com/weather/64x64/night/116.png" alt="Partly cloudy" title="Partly cloudy" class="img-circle" style="width:50px;height:50px;">
+								</td>
+								<td>
+									<img src="//cdn.apixu.com/weather/64x64/night/116.png" alt="Partly cloudy" title="Partly cloudy" class="img-circle" style="width:50px;height:50px;">
+								</td>
+								<td>
+									<img src="//cdn.apixu.com/weather/64x64/day/119.png" alt="Cloudy" title="Cloudy" class="img-circle" style="width:50px;height:50px;">
+								</td>
+								<td>
+									<img src="//cdn.apixu.com/weather/64x64/day/338.png" alt="Heavy snow" title="Heavy snow" class="img-circle" style="width:50px;height:50px;">
+								</td>
+								<td>
+									<img src="//cdn.apixu.com/weather/64x64/day/338.png" alt="Heavy snow" title="Heavy snow" class="img-circle" style="width:50px;height:50px;">
+								</td>
+								<td>
+									<img src="//cdn.apixu.com/weather/64x64/night/230.png" alt="Blizzard" title="Blizzard" class="img-circle" style="width:50px;height:50px;">
+								</td>
+								<td>
+									<img src="//cdn.apixu.com/weather/64x64/night/230.png" alt="Blizzard" title="Blizzard" class="img-circle" style="width:50px;height:50px;">
+								</td>
+							</tr>
+							<tr>
+								<td>Temp</td>
+								<td style="background-color:#9BF6F3;">-9.5&deg;c</td>
+								<td style="background-color:#9BF6F3;">-10.2&deg;c</td>
+								<td style="background-color:#9BF6F3;">-9.6&deg;c</td>
+								<td style="background-color:#9BF6F3;">-5.4&deg;c</td>
+								<td style="background-color:#9BF6F3;">-0.5&deg;c</td>
+								<td style="background-color:#9BF6F3;">-0.3&deg;c</td>
+								<td style="background-color:#9BF6F3;">-1.8&deg;c</td>
+								<td style="background-color:#9BF6F3;">-4.5&deg;c</td>
+							</tr>
+							<tr>
+								<td>Wind</td>
+								<td style="background-color:#80F9CC;">17.6 kmph</td>
+								<td style="background-color:#80F9CC;">13.7 kmph</td>
+								<td style="background-color:#A4F6E9;">10.1 kmph</td>
+								<td style="background-color:#A4F6E9;">12.6 kmph</td>
+								<td style="background-color:#73F6AB;">22.7 kmph</td>
+								<td style="background-color:#73F6AB;">24.1 kmph</td>
+								<td style="background-color:#3CEB88;">28.4 kmph</td>
+								<td style="background-color:#C4EE36;">33.5 kmph</td>
+							</tr>
+							<tr>
+								<td>Precip</td>
+								<td style="background-color:#ffffff;">0.00 mm</td>
+								<td style="background-color:#ffffff;">0.00 mm</td>
+								<td style="background-color:#ffffff;">0.00 mm</td>
+								<td style="background-color:#ffffff;">0.00 mm</td>
+								<td style="background-color:#ffffff;">0.10 mm</td>
+								<td style="background-color:#DDF0F7;">0.40 mm</td>
+								<td style="background-color:#B9E6F6;">0.90 mm</td>
+								<td style="background-color:#9DDDF3;">1.30 mm</td>
+							</tr>
+							<tr>
+								<td>Cloud</td>
+								<td style="background-color:#D1D3D4;">53%</td>
+								<td style="background-color:#FFFFFF;">5%</td>
+								<td style="background-color:#FFFFFF;">7%</td>
+								<td style="background-color:#E1E3E4;">38%</td>
+								<td style="background-color:#BCBFC0;">90%</td>
+								<td style="background-color:#9EA2A3;">100%</td>
+								<td style="background-color:#9EA2A3;">100%</td>
+								<td style="background-color:#9EA2A3;">100%</td>
+							</tr>
+							<tr>
+								<td>Humidity</td>
+								<td>89%</td>
+								<td>89%</td>
+								<td>88%</td>
+								<td>85%</td>
+								<td>87%</td>
+								<td>91%</td>
+								<td>91%</td>
+								<td>89%</td>
+							</tr>
+							<tr>
+								<td>Pressure</td>
+								<td style="background-color:#C6F56F;">1021 mb</td>
+								<td style="background-color:#C6F56F;">1021 mb</td>
+								<td style="background-color:#C6F56F;">1022 mb</td>
+								<td style="background-color:#C6F56F;">1021 mb</td>
+								<td style="background-color:#C6F56F;">1019 mb</td>
+								<td style="background-color:#C6F56F;">1017 mb</td>
+								<td style="background-color:#C6F56F;">1015 mb</td>
+								<td style="background-color:#7FECF9;">1013 mb</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
